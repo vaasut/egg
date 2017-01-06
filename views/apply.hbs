@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
+
+<div class="container">
+    <h1>Apply</h1>
+    <div style = "background: #bb8888" width = 200px id='warning'> <strong></strong>{{errors}}</div>
+    <div class="row">
+ <form action="/apply" method="post">
+
+
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="name" class="form-control" id="name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="city">City:</label>
+      <input type="city" class="form-control" id="city" name="city">
+    </div>
+
+    <div class="form-group">
+      <label for="state">State:</label>
+      <input type="state" class="form-control" id="state" name="state">
+    </div>
+
+    <div class="form-group">
+      <label for="zip">Zip Code:</label>
+      <input type="zip" class="form-control" id="zip" name="zip">
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="phone" class="form-control" id="phone" name="phone">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" name="email">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age/Grade:</label>
+      <input type="age" class="form-control" id="age" name="age">
+    </div>
+
+    <div class="form-group">
+      <label for="school">School:</label>
+      <input type="school" class="form-control" id="school" name="school">
+    </div>
+
+    <div class="form-group">
+      <label for="refer">Referred by:</label>
+      <input type="refer" class="form-control" id="refer" name="refer">
+    </div>
+
+
+      <div class="form-group">
+      <label for="less"> If your request is less than $200, please provide a description of your request, need and timing. :</label>
+      <input type="less" class="form-control" id="less" name="less">
+    </div>
+
+    If your request is greater than $200, please complete the questions below:
+
+          <div class="form-group">
+      <label for="desc"> Provide a brief description of your request, need and timing.</label>
+      <input type="desc" class="form-control" id="desc" name="desc">
+    </div>
+
+     <div class="form-group">
+      <label for="see"> How do you see these funds making a difference in your life?</label>
+      <input type="see" class="form-control" id="see" name="see">
+    </div>
+
+    <div class="form-group">
+      <label for="hear"> How did you hear about the The Local Egg Foundation?</label>
+      <input type="hear" class="form-control" id="hear" name="hear">
+    </div>
+
+    <div class="form-group">
+      <label for="have"> Have you requested funds for this need elsewhere? If yes, where?</label>
+      <input type="have" class="form-control" id="have" name="have">
+    </div>
+
+    I certify that all information in this application is complete and accurate to the best of my knowledge. I will notify The Local Egg Foundation if there are any changes.
+    <p>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
