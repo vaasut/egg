@@ -3,7 +3,7 @@ var router = express.Router();
 
 
 
-var sg = require('sendgrid')(sendgrid.env.SENDGRID_API_KEY);
+var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
 
 
 

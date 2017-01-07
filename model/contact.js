@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
-// var connect = require('./connect');
+var connect = require('./connect');
 
-mongoose.connect(sendgrid.env.MONGODB_URI);
+mongoose.connect(connect.url);
 console.log('something')
 
 module.exports = {

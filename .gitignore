@@ -1,3 +1,4 @@
-sendgrid.env
 node_modules
 model/connect.js
+process.envsendgrid.env
+sendgrid.env
