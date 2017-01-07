@@ -208,7 +208,7 @@ router.post("/apply", function(req,res) {
 
 module.exports = router;
 
-var models = require("../model/contact.js", function(req,res){
+// var models = require("../model/contact.js", function(req,res){
 
-});
+// });
 

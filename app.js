@@ -10,7 +10,7 @@ var users = require('./routes/users');
 
 var app = express();
 
-var models = require("./model/contact")
+// var models = require("./model/contact")
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// var connect = sendgrid.env.MONGODB_URI;
+// var connect = process.env.MONGODB_URI;
 // mongoose.connect(connect);
 
 
