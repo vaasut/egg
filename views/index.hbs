@@ -25,9 +25,49 @@
     background-color: #ECBF60;
 	}
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 4px;
+}
+
+li {
+    float: left;
+}
+
+
+/* Change the link color to #111 (black) on hover */
+
+
+.active {
+    background-color: #4CAF50;
+}
+
+a:link, a:visited {
+    background-color: #4477dd;
+    color: white;
+    padding: 10px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+
+a:hover, a:active {
+    background-color: #dbd421;
+}
+
 </style>
+
 </head>
-<body style="background-color: rgba(150,200,240,.9)">
+
+<!-- <body style="background-color: rgba(150,200,240,.9)">
+ -->
+
 
 <div id="section-top"
 style="display: flex;
@@ -46,14 +86,23 @@ style="display: flex;
 	</div>
 </div>
 
-<div id="section-middle">
+<div style = "font-size: 16px; 
+			font-family: Georgia; 
+			color: #084c8d; 
+			font-weight: bold">
+
+The Local Egg Foundation is a private non-profit foundation based in Saratoga Springs, New York. We are united in our mission to give those in our community the support needed to find success
+</div>
+<div id="section-middle" 
+	style="padding-top: 5px;
+			padding-bottom: 10px;">
 	<center style="font-size: 20px;">
-	<button class="button button1"> Home </button>
-	<button class="button button1"> About Us </button>
-	<button class="button button1"> Contact </button>
+	<a href="/">Home</a>
+	<a href="/contact">Contact</a>
+	<a href="/apply">Apply</a>
 	</center>
 </div>
-
+<!--
 <center style="font-size: 25px;"> <span style="color: yellow"> THE LOCAL EGG FOUNDATION </span> IS DEDICATED TO SERVING LOCAL YOUTH IN SARATOGA COUNTY.</center>
 
 <div id="section-bottom"
@@ -113,7 +162,8 @@ style="display: flex;
 		</div>
 		<button class="button button1" style='color: black'> Apply </button>
 	</div>
-</div>
+</div> -->
+
 
 <center>
 	Copyright © 2012 The Local Egg Foundation - All Rights Reserve	

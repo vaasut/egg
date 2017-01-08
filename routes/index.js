@@ -26,18 +26,18 @@ router.get('/contact', function(req, res, next) {
   var validate = function(req,res){
   	
 	if (!!(req.body.name) === false){
-		return "Please enter your name"
+		return "Please Enter Your Name"
 	}
 
 	if (!!(req.body.email) === false){
 		//res.render("new", {errors: "Goal must be number > 0"});
-		return "Please enter your email";
+		return "Please Enter Your Email";
 	}
 
 	else if (!!(req.body.phone) ===false){
 		//Error
 		//res.render("new", {errors: "Final Date must be after Start Date"}); 
-		return "Please enter your phone number"
+		return "Please Enter Your Phone Number"
 		}
 
 	}	
@@ -128,7 +128,7 @@ router.post("/apply", function(req,res) {
 	"---    If your request is greater than $200, please complete the questions below: ----Provide a brief description of your request, need and timing: " + req.body.desc +
 	"----   How do you see these funds making a difference in your life?" + req.body.see + 
 	"----   How did you hear about the The Local Egg Foundation?" + req.body.hear +
-	"Have you requested funds for this need elsewhere? If yes, where?" + req.body.have
+	"Have you requested funds for this need elsewhere? If yes, where?" + req.body.have + "---Signature" + req.body.sign + "---Date" + req.body.date
 
 	var applicant_contact = sg.emptyRequest({
 	  method: 'POST',
