@@ -46,7 +46,10 @@ router.post("/contact", function(req,res) {
 	console.log("ummmm")
   	console.log(req.body)
 	var errors = validate(req);
-	var contact_info = "Name: " + req.body.name + "---    Email: " + req.body.email + "---    Phone Number: " + req.body.phone + "---   Comments: " + req.body.comments 
+	var cont_name = "Name: " + req.body.name 
+	var cont_email = "Email: " + req.body.email 
+	var cont_phone ="Phone Number: " + req.body.phone  
+	var cont_comments = "Comments: " + req.body.comments 
 	var request_contact = sg.emptyRequest({
 	  method: 'POST',
 	  path: '/v3/mail/send',
@@ -66,8 +69,8 @@ router.post("/contact", function(req,res) {
 	    },
 	    content: [
 	      {
-	        type: 'text/plain',
-	        value: contact_info,
+	        type: 'text/html',
+	        value: "<html>" + cont_name + "<br>" + cont_email + "<br>" + cont_phone + "<br>" + cont_comments + "</html>",
 	      },
 	    ],
 	  },
@@ -163,7 +166,11 @@ router.post("/apply", function(req,res) {
 	    content: [
 	      {
 	        type: 'text/html',
-	        value: "<html>" + app_name + "<br> <p> Hello World!" + app_city + "</html>",
+	        value: "<html>" + app_name + "<br>" + app_city + "<br>" + app_state + "<br>" 
+	        + app_zip + "<br>" + app_phone + "<br>" + app_email + "<br>" + app_age + "<br>" + app_school +
+	        "<br>" + app_refer + "<br>" + app_desc + "<br>" + app_less + "<br>" + app_proud + "<br>" + app_see +
+	        "<br>" + app_hear + "<br>" + app_have + "<br>" + app_add + "<br>" + app_guide + "<br>" + app_work + 
+	        "<br>" + app_sign + "<br>" + app_date + "</html>",
 	      },
 	    ],
 	  },
