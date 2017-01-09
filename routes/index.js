@@ -121,14 +121,16 @@ router.post("/apply", function(req,res) {
 	console.log("ugh")
   	console.log(req.body)
 	var errors = false
-	var applicant_info = "Name: " + req.body.name + document.write("<br>") + "---    City: " + req.body.city + 
-	"---    State: " + req.body.state + "---   Zip Code: " + req.body.zip + "--- Email: " + req.body.email +
-	"---    Phone: " + req.body.phone + "---    Referred by: " + req.body.refer + "---    Age/Grade: " + req.body.age +
-	"---    If your request is less than $200, please provide a description of your request, need and timing: " + req.body.less +
-	"---    If your request is greater than $200, please complete the questions below: ----Provide a brief description of your request, need and timing: " + req.body.desc +
-	"----   How do you see these funds making a difference in your life?" + req.body.see + 
-	"----   How did you hear about the The Local Egg Foundation?" + req.body.hear +
-	"---- Have you requested funds for this need elsewhere? If yes, where?" + req.body.have + "--- Signature" + req.body.sign + "---Date" + req.body.date
+	var applicant_info = "Name: " + req.body.name + 
+	"---    City: " + req.body.city + 
+	"---    State: " + req.body.state + "---   Zip Code: " + req.body.zip + "--- Email: " + req.body.email 
+	// + "---    Phone: " + req.body.phone + "---    Referred by: " + req.body.refer + "---    Age/Grade: " + req.body.age +
+	// "---    Please provide a description of your request, need and timing: " + req.body.less +
+	// "Provide a brief description of your request, need and timing: " + req.body.desc +
+	// "----   How do you see these funds making a difference in your life?" + req.body.see + 
+	// "----   How did you hear about the The Local Egg Foundation?" + req.body.hear +
+	// "---- Have you requested funds for this need elsewhere? If yes, where?" + req.body.have + 
+	// "--- Signature" + req.body.sign + "---Date" + req.body.date
 
 	var applicant_contact = sg.emptyRequest({
 	  method: 'POST',
@@ -153,6 +155,10 @@ router.post("/apply", function(req,res) {
 	        value: applicant_info,
 	      },
 	    ],
+	    "section": {
+	    	":section_Name": "Section 1 Text",
+	    	":section_Name": "Section 2 Text"
+	    } 
 	  },
 	});
 
