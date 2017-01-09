@@ -153,12 +153,12 @@ router.post("/apply", function(req,res) {
 	      {
 	        type: 'text/plain',
 	        value: applicant_info,
+	        section: {
+	    		":section_Name": "Section 1 Text",
+	    		":section_Name2": "Section 2 Text"
+	    	}, 
 	      },
 	    ],
-	    section: {
-	    	":section_Name": "Section 1 Text",
-	    	":section_Name2": "Section 2 Text"
-	    } 
 	  },
 	});
 
