@@ -124,7 +124,7 @@ router.post("/apply", function(req,res) {
 	var applicant_info = "Name: " + req.body.name + 
 	"---    City: " + req.body.city + 
 	"---    State: " + req.body.state + "---   Zip Code: " + req.body.zip + "--- Email: " + req.body.email 
-	// + "---    Phone: " + req.body.phone + "---    Referred by: " + req.body.refer + "---    Age/Grade: " + req.body.age +
+	// +"---    Phone: " + req.body.phone + "---    Referred by: " + req.body.refer + "---    Age/Grade: " + req.body.age +
 	// "---    Please provide a description of your request, need and timing: " + req.body.less +
 	// "Provide a brief description of your request, need and timing: " + req.body.desc +
 	// "----   How do you see these funds making a difference in your life?" + req.body.see + 
@@ -152,11 +152,7 @@ router.post("/apply", function(req,res) {
 	    content: [
 	      {
 	        type: 'text/plain',
-	        value: applicant_info,
-	        section: {
-	    		":section_Name": "Section 1 Text",
-	    		":section_Name2": "Section 2 Text"
-	    	}, 
+	        html: applicant_info,
 	      },
 	    ],
 	  },
