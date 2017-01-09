@@ -24,31 +24,53 @@ a:hover, a:active {
 
 .container {
   /*margin-left: 50%;*/
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 10px;
+  
+  padding-left: 30px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+
 }
 
-#contact_left {
-  background-color: green;
-  border-width: 5px;
-  border-color: blue;
-  border-radius: 2px;
+.right {
+  padding-left: 30px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
 }
+
 
 #comments {
   resize: none; 
 }
 
+h1 {
+  font-family: Georgia;
+  margin-bottom: 10px;
+  border-style: groove;
+  border-color: #8cb8ff;
+  border-width: 4px;
+  border-radius: 5px;
+}
+
+h2 {
+  font-family: Georgia;
+}
+
+.message {
+  font-family: Georgia;
+  font-size: 16px;
+}
+
+.section-top{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
 </style>
 
 
 
-<div id="section-top"
-style="display: flex;
-    justify-content: center;
-    padding: 5px;">
+<div class="section-top">
 
   <div id="block">
     <img id="logo" src="https://localegg.herokuapp.com/images/logo.png">
@@ -62,18 +84,20 @@ style="display: flex;
   </div>
 </div>
 
-<!-- <div id="contact_sections"
-style="display: flex;
-    padding: 5px;">
+<center> <h1> Contact Us </h1> </center>
 
-<div id="contact_left">
-Hello amicum
-</div> -->
-<center style="padding-bottom: 5px;"> <h1> Contact Us </h1> </center>
+<div class="section-top" 
+  style=
+  "margin-bottom: 10px;
+  border-style: groove;
+  border-color: #8cb8ff;
+  border-width: 4px;
+  border-radius: 5px;">
+
 <div class="container">
   <strong> <div style = "background: #cc5555; 
                   font-size: 20px;
-                  border-radius: 4px;" id='warning'> {{errors}}</div> 
+                  border-radius: 4px;" id='warning'> {{errors}}</div> </strong>
   <div class="row">
      <form action="/contact" method="post">
 
@@ -92,20 +116,27 @@ Hello amicum
         </div>
           <div class="form-group">
           <label for="comments">Comments:</label>
-          <textarea rows = '4' cols = '50' class='form-control' name = "comments" id="comments"> Comments </textarea>
+          <textarea rows = '4' cols = '50' style="width: 400px;" class='form-control' name = "comments" id="comments"> Comments </textarea>
         </div>
 
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
   </div>
 </div>
+<div class="right">
+<h2> Address: </h2> 
+<div class="message"> P.O. Box 3446, Saratoga Springs, New York 12866 </div>
+<h2> Email: </h2> 
+<div class="message"> thelocalegg@gmail.com </div>
+</div>
+</div>
 
-<!-- </div> -->
 
-<div id="section-middle">
+
+<div id="section-middle" style="padding-bottom: 5px;">
   <center style="font-size: 20px;">
   <a href="/">Home</a>
-  <a href="/contact">Contact</a>
+  <a href="/contact">Contact Us</a>
   <a href="/apply">Apply</a>
   
   </center>

@@ -121,7 +121,7 @@ router.post("/apply", function(req,res) {
 	console.log("ugh")
   	console.log(req.body)
 	var errors = false
-	var applicant_info = "Name: " + req.body.name + "---    City: " + req.body.city + 
+	var applicant_info = "Name: " + req.body.name + document.write("<br>") + "---    City: " + req.body.city + 
 	"---    State: " + req.body.state + "---   Zip Code: " + req.body.zip + "--- Email: " + req.body.email +
 	"---    Phone: " + req.body.phone + "---    Referred by: " + req.body.refer + "---    Age/Grade: " + req.body.age +
 	"---    If your request is less than $200, please provide a description of your request, need and timing: " + req.body.less +

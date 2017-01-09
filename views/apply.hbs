@@ -24,10 +24,33 @@ a:hover, a:active {
     background-color: #dbd421;
 }
 
-#less, #desc, #see, #hear, #have {
+#less, #desc, #see, #hear, #have, #guide, #work, #add, #proud {
   resize: none; 
 }
 
+h1 {
+  font-family: Georgia;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  border-style: groove;
+  border-color: #8cb8ff;
+  border-width: 4px;
+  border-radius: 5px;
+}
+
+.container {
+  border-style: groove;
+  border-color: #8cb8ff;
+  border-width: 4px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.row{
+  padding-left: 10px;
+  padding-top: 10px;
+}
 
 </style>
 
@@ -50,10 +73,10 @@ style="display: flex;
 
 
 
-<h1>Apply</h1>
+<center> <h1>Apply</h1> </center>
 <strong> <div style = "background: #cc5555; 
                   font-size: 20px;
-                  border-radius: 4px;" id='warning'> {{errors}}</div> 
+                  border-radius: 4px;" id='warning'> {{errors}}</div> </strong>
 <div class="container">
     <div class="row">
  <form action="/apply" method="post">
@@ -104,41 +127,59 @@ style="display: flex;
       <input type="refer" class="form-control" id="refer" name="refer" style="width: 250px;">
     </div>
 
+          <div class="form-group">
+      <label for="desc"> Provide a brief description of your request, need and timing.</label>
+      <textarea style="width: 450px;" rows = '4' cols = '70' type="desc" class="form-control" id="desc" name="desc">
+        </textarea>
+    </div>
 
-      <div class="form-group">
-      <label for="less"> If your request is less than $200, please provide a description of your request, need and timing:</label>
-      <textarea type="less" class="form-control" style="width: 350px;" id="less" name="less" rows = '4' cols = '50'>
+          <div class="form-group">
+      <label for="less"> What are your educational interests and goals? </label>
+      <textarea type="less" class="form-control" style="width: 450px;" id="less" name="less" rows = '4' cols = '70'>
       </textarea>
     </div>
 
-      <div style="
-      font-size: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;">
-      If your request is greater than $200, please answer the questions below.
-      </div>
-
-          <div class="form-group">
-      <label for="desc"> Provide a brief description of your request, need and timing.</label>
-      <textarea style="width: 350px;" rows = '4' cols = '50' type="desc" class="form-control" id="desc" name="desc">
-        </textarea>
+    <div class="form-group">
+      <label for="proud"> Of what accomplishment are you most proud? </label>
+      <textarea type="proud" class="form-control" style="width: 450px;" id="proud" name="proud" rows = '4' cols = '70'>
+      </textarea>
     </div>
 
      <div class="form-group">
       <label for="see"> How do you see these funds making a difference in your life?</label>
-      <textarea style="width: 350px;" rows = '4' cols = '50' type="see" class="form-control" id="see" name="see">
+      <textarea style="width: 450px;" rows = '4' cols = '70' type="see" class="form-control" id="see" name="see">
          </textarea>
     </div>
 
     <div class="form-group">
       <label for="hear"> How did you hear about the The Local Egg Foundation?</label>
-      <textarea style="width: 350px;" rows = '4' cols = '50' type="hear" class="form-control" id="hear" name="hear">
+      <textarea style="width: 450px;" rows = '2' cols = '40' type="hear" class="form-control" id="hear" name="hear">
       </textarea>
     </div>
 
     <div class="form-group">
       <label for="have"> Have you requested funds for this need elsewhere? If yes, where?</label>
-      <textarea style="width: 280px;" rows = '2' cols = '40' type="have" class="form-control" id="have" name="have">
+      <textarea style="width: 450px;" rows = '2' cols = '40' type="have" class="form-control" id="have" name="have">
+      </textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="add"> Is there any additional information you would like us to consider? </label>
+      <textarea style="width: 450px;" rows = '5' cols = '70' type="add" class="form-control" id="add" name="add">
+      </textarea>
+    </div>
+
+    <h3> References </h3>
+
+    <div class="form-group" style = "margin-left: 30px;">
+      <label for="guide"> Guidance Counselor: Name and Contact Information</label>
+      <textarea style="width: 280px;" rows = '2' cols = '40' type="guide" class="form-control" id="guide" name="guide">
+      </textarea>
+    </div>
+
+    <div class="form-group" style = "margin-left: 30px;">
+      <label for="work"> Work / Extracurricular Reference: Name and Contact Information</label>
+      <textarea style="width: 280px;" rows = '2' cols = '40' type="work" class="form-control" id="work" name="work">
       </textarea>
     </div>
 
@@ -162,10 +203,13 @@ style="display: flex;
   </form>
   <br>
 
-<div id="section-middle">
+  </div>
+</div>
+
+<div id="bottom" style="padding-bottom: 5px;">
   <center style="font-size: 20px;">
   <a href="/">Home</a>
-  <a href="/contact">Contact</a>
+  <a href="/contact">Contact Us</a>
   <a href="/apply">Apply</a>
   
   </center>
