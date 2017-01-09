@@ -121,16 +121,27 @@ router.post("/apply", function(req,res) {
 	console.log("ugh")
   	console.log(req.body)
 	var errors = false
-	var applicant_info = "Name: " + req.body.name + 
-	"---    City: " + req.body.city + 
-	"---    State: " + req.body.state + "---   Zip Code: " + req.body.zip + "--- Email: " + req.body.email 
-	// +"---    Phone: " + req.body.phone + "---    Referred by: " + req.body.refer + "---    Age/Grade: " + req.body.age +
-	// "---    Please provide a description of your request, need and timing: " + req.body.less +
-	// "Provide a brief description of your request, need and timing: " + req.body.desc +
-	// "----   How do you see these funds making a difference in your life?" + req.body.see + 
-	// "----   How did you hear about the The Local Egg Foundation?" + req.body.hear +
-	// "---- Have you requested funds for this need elsewhere? If yes, where?" + req.body.have + 
-	// "--- Signature" + req.body.sign + "---Date" + req.body.date
+	var app_name = "Name: " + req.body.name
+	var app_city = "City: " + req.body.city
+	var app_state =" State: " + req.body.state 
+	var app_zip = "Zip Code: " + req.body.zip
+	var app_phone = "Phone: " + req.body.phone
+	var app_email = "Email: " + req.body.email 
+	var app_age = "Age/Grade: " + req.body.age
+	var app_school = "School" + req.body.school
+	var app_refer =    "Referred by: " + req.body.refer
+	var app_desc = "Please provide a description of your request, need and timing. " + req.body.desc
+	var app_less = "What are your educational interests and goals? " + req.body.less
+	var app_proud =	"Of what accomplishment are you most proud? " + req.body.proud
+	var app_see = "How do you see these funds making a difference in your life? " + req.body.see
+	var app_hear= "How did you hear about the The Local Egg Foundation? " + req.body.hear
+	var app_have= "Have you requested funds for this need elsewhere? If yes, where? " + req.body.have
+	var app_add= "Is there any additional information you would like us to consider? " + req.body.add
+	var app_guide = "Guidance Counselor: Name and Contact Information " + req.body.guide
+	var app_work = "Work / Extracurricular Reference: Name and Contact Information" + req.body.work
+	var app_sign = "Signature: " + req.body.sign
+	var app_date = "Date " + req.body.date
+
 
 	var applicant_contact = sg.emptyRequest({
 	  method: 'POST',
@@ -151,8 +162,8 @@ router.post("/apply", function(req,res) {
 	    },
 	    content: [
 	      {
-	        type: 'text/plain',
-	        value: "<html>" + applicant_info + "<br> <p> Hello World!" + "</html>",
+	        type: 'text/html',
+	        value: "<html>" + app_name + "<br> <p> Hello World!" + app_city + "</html>",
 	      },
 	    ],
 	  },
