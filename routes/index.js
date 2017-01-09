@@ -152,7 +152,7 @@ router.post("/apply", function(req,res) {
 	    content: [
 	      {
 	        type: 'text/plain',
-	        html: applicant_info,
+	        value: <html> applicant_info <br> <p> Hello World! </html>,
 	      },
 	    ],
 	  },
