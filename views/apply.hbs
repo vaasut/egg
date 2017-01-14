@@ -74,21 +74,22 @@ style="display: flex;
 
 
 <center> <h1>Apply</h1> </center>
-<strong> <div style = "background: #cc5555; 
+<center> <strong> <div style = "background: #cc5555; 
                   font-size: 20px;
-                  border-radius: 4px;" id='warning'> {{errors}}</div> </strong>
+                  border-radius: 4px;
+                  margin-bottom:10px;" id='warning'> {{errors}}</div> </strong> </center>
 <div class="container">
     <div class="row">
  <form action="/apply" method="post">
 
 
     <div class="form-group">
-      <label for="name">Name:</label>
+      <label for="name">Name:  (required)</label>
       <input type="name" class="form-control" id="name" name="name" style="width: 250px;">
     </div>
 
     <div class="form-group">
-      <label for="city">City:</label>
+      <label for="city">City:  (required)</label>
       <input type="city" class="form-control" id="city" name="city" style="width: 250px;">
     </div>
 
@@ -103,7 +104,7 @@ style="display: flex;
     </div>
 
     <div class="form-group">
-      <label for="phone">Phone Number:</label>
+      <label for="phone">Phone Number:  (required)</label>
       <input type="phone" class="form-control" id="phone" name="phone" style="width: 150px;">
     </div>
 
@@ -113,7 +114,7 @@ style="display: flex;
     </div>
 
     <div class="form-group">
-      <label for="age">Age/Grade:</label>
+      <label for="age">Age/Grade:  (required)</label>
       <input type="age" class="form-control" id="age" name="age" style="width: 150px;">
     </div>
 
@@ -188,7 +189,7 @@ style="display: flex;
     </div>
 
     <div class="form-group" style = "margin-left: 30px;">
-      <label for="sign">Signature:</label>
+      <label for="sign">Signature:  (required)</label>
       <input type="sign" class="form-control" id="sign" name="sign" style="width: 250px;">
     </div>
 
@@ -216,5 +217,5 @@ style="display: flex;
 </div>
 
 <center>
-  Copyright © 2012 The Local Egg Foundation - All Rights Reserve  
+  Copyright © 2012 The Local Egg Foundation - All Rights Reserved  
 </center>

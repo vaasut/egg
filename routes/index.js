@@ -120,10 +120,42 @@ router.get('/apply', function(req, res, next) {
 
 	});
 
+  var validate_app = function(req,res){
+  	
+	if (!!(req.body.name) === false){
+		return "Please Enter Your Name"
+	}
+
+	if (!!(req.body.city) ===false){
+		//Error
+		//res.render("new", {errors: "Final Date must be after Start Date"}); 
+		return "Please Enter Your City"
+		}
+
+	if (!!(req.body.phone) === false){
+		//res.render("new", {errors: "Goal must be number > 0"});
+		return "Please Enter Your Phone Number";
+	}
+
+	if (!!(req.body.age) ===false){
+		//Error
+		//res.render("new", {errors: "Final Date must be after Start Date"}); 
+		return "Please Enter Your Age"
+		}
+
+	if (!!(req.body.sign) ===false){
+		//Error
+		//res.render("new", {errors: "Final Date must be after Start Date"}); 
+		return "Please Enter Your Electronic Signature"
+		}
+
+
+	}	
+
 router.post("/apply", function(req,res) {
 	console.log("ugh")
   	console.log(req.body)
-	var errors = false
+	var errors = validate_app(req)
 	var app_name = "Name: " + req.body.name
 	var app_city = "City: " + req.body.city
 	var app_state =" State: " + req.body.state 
